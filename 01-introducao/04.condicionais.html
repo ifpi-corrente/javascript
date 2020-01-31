@@ -9,6 +9,33 @@
 <body>
   
   <script>
+    function retornaSexo(sexo) {
+      if (sexo == 'm'){
+        return "masculino";
+      } else if (sexo == 'f'){
+        return "feminino";
+      }else {
+        return "indefinindo"
+      }
+    }
+
+    function retornaSexoSwitch(sexo){
+      switch(sexo){
+        case 'm':
+          return "masculino"
+        case 'f':
+          return "feminino"
+        default: 
+          return "indefinido"
+      }
+    }
+
+    resultado = retornaSexo('x');
+    console.log(resultado);
+
+    var resultado2 = retornaSexoSwitch('f');
+    console.log(resultado2);
   </script>
+  
 </body>
 </html>

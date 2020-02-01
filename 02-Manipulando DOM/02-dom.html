@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1>incio</h1>
+  </div>
+  <h1 id="app">Manipulando DOM</h1>
+  <input type="text">
+  <input type="text" value="segundo">
+
+  <button class="button">Me pressione</button>
+
+  
+  <script>
+
+    //document.getElementById
+    //var elemento = document.getElementById('app');
+    //console.log(elemento); 
+
+    // var elemento2 = document.getElementsByTagName('input')[0];
+    // console.log(elemento2);
+
+    // var elemento3 = document.getElementsByClassName('button')[0]
+    // console.log(elemento3);
+
+    var elemento4 = document.querySelector('body h1#app');
+    console.log(elemento4.textContent);
+
+    var elemento5 = document.querySelector('h1');
+    elemento5.textContent = elemento4.textContent;
+    console.log(elemento5);
+  </script>
+</body>
+</html>

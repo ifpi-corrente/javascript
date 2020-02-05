@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Criando elementos com JS</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Criando elementos</h1>
+    <a href="http://ifpi.edu.br">Site do IFPI</a>
+    <a href=""></a>
+
+  </div>
+  
+  <script>
+    var link = document.createElement('a');
+    var texto = document.createTextNode('Link criado pelo JS');
+    link.setAttribute('href', 'http://ifpi.edu.br')
+    link.appendChild(texto);
+    var div1 = document.querySelector('#app');
+    div1.appendChild(link);
+
+  </script>
+</body>
+</html>

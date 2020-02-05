@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lista de Tarefas</title>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      
+    </ul>
+    <input type="text" placeholder="Tarefa">
+    <button>Criar Tarefa</button>
+
+  </div>
+
+  <script>
+    var tarefas = ['Aprender JS', 'Reservar Janta', 'Acordar cedo'];
+
+    function mostraTarefas(){
+      for(tarefa of tarefas){
+       var texto = document.createTextNode(tarefa);
+       var item = document.createElement('li');
+       item.appendChild(texto);
+       var lista = document.querySelector('ul');
+       lista.appendChild(item);
+
+    }
+  }
+    mostraTarefas();
+  </script>  
+
+
+
+
+
+
+
+</body>
+</html>

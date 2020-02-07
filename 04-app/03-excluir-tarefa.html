@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lista de Tarefas</title>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      
+    </ul>
+    <input type="text" placeholder="Tarefa">
+    <button>Criar Tarefa</button>
+
+  </div>
+
+  <script>
+    var tarefas = ['Aprender JS', 'Reservar Janta', 'Acordar cedo'];
+    var botao = document.querySelector('button');
+    var lista = document.querySelector('ul');
+
+    function mostraTarefas(){
+      
+      for(tarefa of tarefas){
+       var texto = document.createTextNode(tarefa);
+       var item = document.createElement('li');
+       item.appendChild(texto);
+       var lista = document.querySelector('ul');
+       lista.appendChild(item);
+       var posicao = tarefas.indexOf(tarefa);
+       var link = document.createElement('a');
+       link.setAttribute('href', '#');
+       link.setAttribute('onclick', 'removerTarefa('+posicao+')');
+       var textoLink = document.createTextNode('  Excluir');
+       link.appendChild(textoLink);
+       item.appendChild(link);
+
+    }
+  }
+  mostraTarefas();
+
+  function adicionaTarefa(){
+    lista.innerHTML ="";
+    var textoInput = document.querySelector('input');
+    tarefas.push(textoInput.value);
+    mostraTarefas();
+  }
+
+  botao.onclick = adicionaTarefa;
+
+  function removerTarefa(posicao){
+    lista.innerHTML ="";
+    tarefas.splice(posicao, 1);
+    mostraTarefas();
+  }
+
+  </script>  
+
+
+
+
+
+
+
+</body>
+</html>
